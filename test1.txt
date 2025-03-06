@@ -1,1 +1,30 @@
 Хорошко Александр
+
+
+#include <stdlib.h>
+#include <iostream>
+#include <stdio.h>
+#include <math.h>
+
+void main()
+{
+	double a, b, c, x1, x2, D, y;
+	setlocale(LC_ALL, "Russian");
+	printf("Введите значения a, b, c через пробел и нажмите Enter: ");
+	scanf("%lf%lf%lf", &a, &b, &c);
+
+	D = pow(b, 2) - 4 * a * c;
+	if (D > 0)
+	{
+		x1 = (-b + sqrt(D)) / 2 * a;
+		x2 = (-b - sqrt(D)) / 2 * a;
+		printf("x1 = %lf, x2 = %lf\n", x1, x2);
+	}
+	else if (D == 0)
+	{
+		x1 = -b / 2 * a;
+		printf("x = %lf\n", x1);
+	}
+	else
+		printf("Нет решения");
+}
